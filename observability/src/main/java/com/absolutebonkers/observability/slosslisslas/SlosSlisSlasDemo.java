@@ -7,10 +7,14 @@ public final class SlosSlisSlasDemo {
 
     public static String run() {
         long totalRequests = 10_000;
-                long successfulRequests = 9_995;
-                double sli = successfulRequests * 100.0 / totalRequests;
-                double budgetEvents = totalRequests * (1.0 - 0.999);
-                return "availability-sli=" + String.format(Locale.ROOT, "%.2f", sli) + "%, error-budget-events=" + (int) budgetEvents;
+        long successfulRequests = 9_995;
+        double sli = successfulRequests * 100.0 / totalRequests;
+        long allowedErrors = Math.round(totalRequests * (1.0 - 0.999));
+        long observedErrors = totalRequests - successfulRequests;
+        long remainingErrors = Math.max(0, allowedErrors - observedErrors);
+        return "availability-sli=" + String.format(Locale.ROOT, "%.2f", sli)
+                + "%, error-budget-allowed=" + allowedErrors
+                + ", error-budget-remaining=" + remainingErrors;
     }
 
     public static void main(String[] args) { System.out.println(run()); }

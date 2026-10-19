@@ -1,6 +1,6 @@
 # Distributed Tracing (Jaeger, Zipkin, OpenTelemetry)
 
-A trace context joins a parent request span with a child database span, illustrating trace/span identity propagation.
+The example prints a synthetic trace ID and parent/child span names. It illustrates trace structure only; it does not create SDK spans, propagate context, or export traces.
 
 ## Trade-offs
 

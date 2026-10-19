@@ -1,6 +1,6 @@
 # Logging (Structured Logging, ELK Stack)
 
-A small structured event records stable fields that can be indexed and queried by a log pipeline such as Elasticsearch, Logstash, and Kibana.
+The example constructs a small JSON event with a stable Elastic Common Schema field name; it does not write to a file or send data to Elasticsearch, Logstash, or Kibana.
 
 ## Trade-offs
 

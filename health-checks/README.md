@@ -1,6 +1,6 @@
 # Health Check Endpoints
 
-Separate liveness from readiness: a healthy process can be live while temporarily not ready to accept traffic.
+Separate liveness from readiness: a healthy process can be live while temporarily not ready to accept traffic. The local example models the two boolean decisions; it does not start an HTTP endpoint or probe a real dependency.
 
 ## Trade-offs
 

@@ -1,6 +1,6 @@
 # Metrics (Prometheus, Grafana)
 
-A counter and simple latency sample demonstrate metric types that Prometheus can scrape and Grafana can visualize.
+The example prints fixed, Prometheus-style counter and duration values; it does not expose a scrape endpoint or emit telemetry.
 
 ## Trade-offs
 

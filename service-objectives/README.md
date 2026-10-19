@@ -1,6 +1,6 @@
 # SLOs, SLIs, SLAs
 
-A simple availability SLI is compared with an SLO target, and the remaining error budget is calculated for the period.
+A simple availability SLI is compared with a 99.9% SLO; the example calculates the allowed errors and subtracts observed errors to report the remaining budget for that request count.
 
 ## Trade-offs
 
